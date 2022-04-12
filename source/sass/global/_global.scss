@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  font-family: $trebuchet;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: $dove-gray;
+
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%), url("../img/Pattern.png");
+  background-color: #000000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  vertical-align: top;
+}
+
+svg {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}

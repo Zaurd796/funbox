@@ -1,0 +1,133 @@
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100% - 30px);
+  max-width: 320px;
+  margin-bottom: 14px;
+  padding-top: 21px;
+
+  background: $concrete;
+  border: 4px solid $curious-blue;
+  border-radius: 12px;
+  clip-path: polygon(11% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $picton-blue;
+
+    .card__weight-box {
+      background-color: $picton-blue;
+    }
+  }
+
+  &.card--selected {
+    border-color: $razzmatazz;
+
+    .card__weight-box {
+      background-color: $razzmatazz;
+    }
+  }
+
+  &.card--selected-hover {
+    border-color: $cerise-red;
+
+    .card__weight-box {
+      background-color: $cerise-red;
+    }
+  }
+
+  &.card--disabled {
+    border-color: $nobel;
+
+    .card__title,
+    .card__subtitle,
+    .card__text {
+      color: $nobel;
+    }
+
+    .card__img {
+      opacity: 0.5;
+    }
+
+    .card__weight-box {
+      background-color: $nobel;
+    }
+
+    & + .choices__text {
+      color: $laser-lemon;
+    }
+  }
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 5px;
+
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+
+  &.card__title--selected-hover {
+    color: $cerise-red;
+  }
+}
+
+.card__subtitle {
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-left: 54px;
+
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: $black;
+}
+
+.card__subtitle-span {
+  display: block;
+
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.card__text {
+  margin-top: 0;
+  margin-bottom: auto;
+  padding-left: 54px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__weight-box {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+
+  color: $white;
+
+  background: $curious-blue;
+  border-radius: 50%;
+}
+
+.card__weight-number {
+  font-size: 42px;
+  line-height: 42px;
+}
+
+.card__weight {
+  font-size: 21px;
+  line-height: 22px;
+}
